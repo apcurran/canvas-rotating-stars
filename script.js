@@ -27,8 +27,6 @@ class Particle {
         let y = Math.sin(this.position) * this.moveRadius + canvas.height / 2;
 
         generateStar(x, y, 5, this.size, this.size / 2);
-
-        ctx.fill();
     }
 
     update() {
@@ -93,5 +91,5 @@ function generateStar(positionX, positionY, spikes, outerRadius, innerRadius) {
     }
 
     ctx.lineTo(positionX, positionY - outerRadius);
-    ctx.closePath();
+    ctx.fill();
 }
